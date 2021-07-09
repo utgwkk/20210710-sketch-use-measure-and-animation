@@ -16,6 +16,7 @@ export const App: React.VFC = () => {
           animate={{ scale: 1 }}
           transition={{ duration: 0.3 }}
           className={styles.container}
+          onAnimationStart={() => setDone(false)}
           onAnimationComplete={() => setDone(true)}
         >
           <h2>with tracking animation complete</h2>
