@@ -1,9 +1,8 @@
-import React from "react";
 import { motion } from "framer-motion";
+import React, { useState } from "react";
 
-import { Child } from "./Child";
 import styles from "./App.module.css";
-import { useState } from "react";
+import { Child } from "./Child";
 
 export const App: React.VFC = () => {
   const [done, setDone] = useState(false);
