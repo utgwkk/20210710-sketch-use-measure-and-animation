@@ -1,6 +1,11 @@
 .container {
-    width: 800px;
+    width: 40vw;
     height: 600px;
     color: white;
     background-color: gray;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
 }

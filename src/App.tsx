@@ -10,15 +10,27 @@ export const App: React.VFC = () => {
   return (
     <div className="App">
       <h1>Hello, world!</h1>
-      <motion.div
-        initial={{ scale: 0 }}
-        animate={{ scale: 1 }}
-        transition={{ duration: 0.3 }}
-        className={styles.container}
-        onAnimationComplete={() => setDone(true)}
-      >
-        <Child animationCompleted={done} />
-      </motion.div>
+      <div className={styles.flex}>
+        <motion.div
+          initial={{ scale: 0 }}
+          animate={{ scale: 1 }}
+          transition={{ duration: 0.3 }}
+          className={styles.container}
+          onAnimationComplete={() => setDone(true)}
+        >
+          <h2>with tracking animation complete</h2>
+          <Child animationCompleted={done} />
+        </motion.div>
+        <motion.div
+          initial={{ scale: 0 }}
+          animate={{ scale: 1 }}
+          transition={{ duration: 0.3 }}
+          className={styles.container}
+        >
+          <h2>without tracking animation complete</h2>
+          <Child />
+        </motion.div>
+      </div>
     </div>
   );
 };

@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import useMeasure from "react-use-measure";
 
 interface ChildProps {
-  animationCompleted: boolean;
+  animationCompleted?: boolean;
 }
 
 export const Child: React.VFC<ChildProps> = ({ animationCompleted }) => {
